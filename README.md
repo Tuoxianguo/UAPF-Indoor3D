@@ -2,6 +2,10 @@
 
 **Uncertainty-Aware Probabilistic Fusion for Robust Indoor 3D Reconstruction in Low-Texture Environments**
 
+Official code release for the manuscript submitted to *The Visual Computer*.
+
+This repository provides a *reusable* implementation of the two core contributions of the paper:
+
 1. **Multi-factor Bayesian overlap estimation** — inter-frame overlap is modelled as a latent random variable; geometric distance, appearance similarity and motion consistency are fused through a Beta posterior that returns both a **point estimate** (posterior mean) and an **uncertainty** (posterior variance).
 2. **Uncertainty-aware adaptive keyframe decision** — the posterior overlap and its uncertainty drive an adaptive threshold and a hierarchical, multi-criteria keyframe policy that suppresses long-sequence drift while reducing redundant keyframes.
 

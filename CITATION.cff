@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or the Weak Texture-Indoor benchmark, please cite the following."
+title: "UAPF-Indoor3D: Uncertainty-Aware Probabilistic Fusion for Robust Indoor 3D Reconstruction in Low-Texture Environments"
+authors:
+  - family-names: Wang
+    given-names: Min
+  - family-names: Wang
+    given-names: Xiaogang
+  - family-names: Zhang
+    given-names: Liuhong
+  - family-names: Li
+    given-names: Haijun
+version: 1.0.0
+date-released: 2026-06-03
+license: "Non-Commercial (inherited from MUSt3R / NAVER Corporation)"
+repository-code: "https://github.com/<anonymised>/UAPF-Indoor3D"
+preferred-citation:
+  type: article
+  title: "Uncertainty-Aware Probabilistic Fusion for Robust Indoor 3D Reconstruction in Low-Texture Environments"
+  authors:
+    - family-names: Wang
+      given-names: Min
+    - family-names: Wang
+      given-names: Xiaogang
+    - family-names: Zhang
+      given-names: Liuhong
+    - family-names: Li
+      given-names: Haijun
+  journal: "The Visual Computer"
+  year: 2026

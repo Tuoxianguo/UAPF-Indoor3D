@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# data / weights / results
+*.pth
+*.ckpt
+*.pkl
+*.npz
+weights/
+checkpoints/
+results/
+output/
+data/
+datasets/
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# notebooks
+.ipynb_checkpoints/

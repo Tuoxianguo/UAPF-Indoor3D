@@ -1,0 +1,19 @@
+# --- core contribution (GPU-free) ---
+numpy>=1.21
+scipy>=1.7          # optional, only for the ELBO diagnostic in uapf/overlap.py
+
+# --- full reconstruction pipeline (uapf/slam_runner.py) ---
+torch>=2.0
+torchvision
+opencv-python
+open3d>=0.17.0
+tqdm
+pyaml
+scikit-learn
+
+# --- evaluation / plotting ---
+matplotlib
+evo                 # ATE / RPE trajectory evaluation
+
+# NOTE: the dense-geometry backbone and pretrained weights come from MUSt3R/DUSt3R.
+# Install MUSt3R separately: https://github.com/naver/must3r
