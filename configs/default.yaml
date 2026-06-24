@@ -1,0 +1,45 @@
+# Default hyper-parameters for UAPF-Indoor3D (values used in the paper).
+
+model:
+  res: 512                 # input resolution (224 or 512)
+  searcher: kdtree-scipy-quadrant_x2
+  num_init_frames: 2
+  fixed_focal: true
+
+overlap:
+  mode: nn-norm            # nn-norm | fusion | bayesian | geo_only | app_only
+  percentile: 85.0         # percentile of NN distances used as the overlap distance
+  min_conf_keyframe: 1.2   # ignore 3D points below this confidence
+  subsample: 2
+
+# Bayesian overlap model (uapf/overlap.py)
+bayesian:
+  alpha_prior: 2.0
+  beta_prior: 2.0
+  obs_weight: 5.0
+  geo_rate: 1.0
+
+# Adaptive keyframe decision (uapf/keyframe.py)
+keyframe:
+  window_size: 30          # history window (sensitivity-optimal range 30-40)
+  k_std: 0.5               # threshold = mean - k_std * std - uncertainty_gain * unc.
+  uncertainty_gain: 0.5
+  info_gain_thr: 0.1
+  force_track_thr: 0.5     # forced insertion when tracking quality < this
+  regular_track_thr: 0.7
+  t_force: 30              # forced insertion if gap > this many frames
+  t_baseline: 15           # time-baseline insertion
+  t_min: 10                # minimum gap between keyframes
+
+variational:
+  learning_rate: 1.0e-3    # sensitivity-optimal ~1e-3
+  confidence_threshold: 0.6  # sensitivity-optimal range 0.55-0.65
+
+reconstruction:
+  voxel_size: 0.02
+  viz_conf: 4.0
+  loop_closure:
+    cosine_sim_thr: 0.85
+    min_temporal_gap: 30
+    posterior_mean_thr: 0.5
+    max_uncertainty: 0.1
